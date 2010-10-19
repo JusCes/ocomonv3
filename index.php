@@ -108,7 +108,7 @@ include ("PATHS.php");
   <div class="header">
 	<div class="topheader">
 	  <div class="logo">
-		  <img src="includes/images/index_logo.png" height="60"  />
+		  <img src="includes/images/main_logo.png" height="60"  />
 	  </div> <!-- end .logo -->
         
 <div class="button_area_left">
