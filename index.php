@@ -22,6 +22,26 @@ is_file( "./includes/config.inc.php" )
 	or die( "Você precisa configurar o arquivo config.inc.php em OCOMON/INCLUDES/para iniciar o uso do OCOMON!<br>Leia o arquivo <a href='LEIAME.txt'>LEIAME.TXT</a> para obter as principais informações sobre a instalação do OCOMON!".
 		"<br><br>You have to configure the config.inc.php file in OCOMON/INCLUDES/ to start using Ocomon!<br>Read the file <a href='README.txt'>README.TXT</a>to get the main informations about the Ocomon Installation!" );
 
+
+/******************************************************************************/
+/*@@jefersondossantos@gmail.com 2010/10/11
+a funcao abaixo vai substituir o formulario antigo q foi movido pro login.php
+*/
+if (!isset($_SESSION))
+{
+    session_start();
+
+}
+if(!isset($_SESSION['s_usuario']) || 
+	(trim($_SESSION['s_usuario'])=='')) {
+	header("location: login.php");
+	exit();
+}
+
+/*@@jefersondossantos@gmail.com 2010/10/11
+Codigo desnecessário. mantido ainda para base de comparação
+
+
 	session_start();
 	//session_destroy();
 	if (!isset($_SESSION['s_language']))  $_SESSION['s_language']= "pt_BR.php";
@@ -29,6 +49,7 @@ is_file( "./includes/config.inc.php" )
 	if (!isset($_SESSION['s_usuario']))  $_SESSION['s_usuario']= "";
 	if (!isset($_SESSION['s_logado']))  $_SESSION['s_logado']= "";
 	if (!isset($_SESSION['s_nivel']))  $_SESSION['s_nivel']= "";
+*******************************************************************************/
 
 	include ("PATHS.php");
 	//include ("".$includesPath."var_sessao.php");
@@ -77,11 +98,16 @@ print "<head>";
 
 print "<title>OCOMON ".VERSAO."</title>";
 print "<link rel='stylesheet' href='includes/css/estilos.css.php'>"; //type='text/css'
+print "<link rel='stylesheet' type='text/css' href='includes/css/quickmenu_styles.css'/>";
+
+
+print "<script type='text/javascript' src='includes/javascript/quickmenu.js'></script>";	
 print "</head><body onLoad=\"setHeight('centro'); setHeight('centro2')\">";
 
-print "<table width='100%' border='0px' id='geral'><tr><td colspan='2'>";
+print "<table width='100%' border='0px' id='geral' height='100%'><tr height='81'><td colspan='2'>";
 
-print "<table class='topo' border='0' id='cabecalho'>
+							//cabecalho
+print "<table class='topo' border='0' id='cabecalho'> 
 	<tr>
 		<td ><img src='MAIN_LOGO.png' height='46' width='300'></td>
 		<td align='center'>".$USER_TYPE.":<b> ".$uLogado."</b></td><td >|</td>
@@ -92,14 +118,16 @@ print "<table class='topo' border='0' id='cabecalho'>
 		</select>
 		</td>
 	</tr></table>";
-print "<table class='barra' border='0px' id='barra'><tr>";
 
-	if (empty($_SESSION['s_permissoes'])&& $_SESSION['s_nivel']!=1){
-		print "<td width='5%'>&nbsp;</td>";
-		print "<td width='7%'>&nbsp;</td>";
-		print "<td width='7%'>&nbsp;</td>";
-		print "<td width='5%' >&nbsp;</td>";
-		print "<td width='76%'>&nbsp;</td>";
+
+
+
+
+
+
+
+
+	if (empty($_SESSION['s_permissoes'])&& $_SESSION['s_nivel']!=1){ //inicio do menu
 		$conec->desconecta('MYSQL');
 	} else{
 
@@ -123,64 +151,172 @@ print "<table class='barra' border='0px' id='barra'><tr>";
 			$rowStyle = mysql_fetch_array($execStyle);
 		}
 
-		print "<td id='HOME' width='5%' class='barraMenu'><a class='barra' onMouseOver=\"destaca('HOME')\" onMouseOut=\"libera('HOME')\" onclick=\"loadIframe('menu.php?sis=h','menu','home.php', 'centro',3,'HOME')\" >&nbsp;".TRANS('MNS_HOME')."&nbsp;</a></td>";
+
+
+
+
+
+
+//menu home
+include ("includes/menu/quickmenu-1.php");
+
+
 		$sis="";
 		$sisPath="";
 		$sistem="home.php";
 		$marca = "HOME";
-		//if (($_SESSION['s_ocomon']==1) && ($_SESSION['s_area'] != $rowconf['conf_ownarea'])) {
+
+
+
+
+
+
 		if (($_SESSION['s_ocomon']==1) && !isIn($_SESSION['s_area'],$rowconf['conf_ownarea_2'])) {
-			print "<td id='OCOMON' width='7%'  class='barraMenu'><a class='barra'  onMouseOver=\"destaca('OCOMON')\" onMouseOut=\"libera('OCOMON')\" onclick=\"loadIframe('menu.php?sis=o','menu','".$ocoDirPath."abertura.php','centro',2,'OCOMON')\">&nbsp;".TRANS('MNS_OCORRENCIAS')."&nbsp;</a></td>";
+
+//menu ocorrencias
+include ("includes/menu/quickmenu-2.php");
+
+
+
 			if ($sis=="") $sis="sis=o";
 			$sisPath = $ocoDirPath;
 			$sistem = "abertura.php";
 			$marca = "OCOMON";
-			//$home = "home=true";
-		} else 	// incluir para usuario simples.
-		//if (($_SESSION['s_ocomon']==1) && ($_SESSION['s_area'] == $rowconf['conf_ownarea'])) {
-		if (($_SESSION['s_ocomon']==1) && isIn($_SESSION['s_area'], $rowconf['conf_ownarea_2'])) {
-			print "<td id='OCOMON' width='7%'  class='barraMenu'><a class='barra'  onMouseOver=\"destaca('OCOMON')\" onMouseOut=\"libera('OCOMON')\" onclick=\"loadIframe('menu.php?sis=s','menu','".$ocoDirPath."abertura_user.php?action=listall','centro',3,'OCOMON')\">&nbsp;".TRANS('MNS_OCORRENCIAS')."&nbsp;</a></td>";
+
+
+
+
+
+
+
+} else 	// incluir para usuario simples.
+	if (($_SESSION['s_ocomon']==1) && isIn($_SESSION['s_area'], $rowconf['conf_ownarea_2'])) {
+
+
+//menu ocorrencias
+include ("includes/menu/quickmenu-2.php");
+
+
 			$sis="sis=s";
 			$sisPath = $ocoDirPath;
 			$sistem = "abertura_user.php?action=listall";
 			$marca = "OCOMON";
-		} else
+		}
+
+
+else
 			print "<td width='7%' STYLE='{border-right: thin solid #C7C8C6; color:#C7C8C6}'>&nbsp;".TRANS('MNS_OCORRENCIAS')."&nbsp;</td>";
 
-		if ($_SESSION['s_invmon']==1){
-			print "<td id='INVMON' width='7%'  class='barraMenu'><a class='barra' onMouseOver=\"destaca('INVMON')\" onMouseOut=\"libera('INVMON')\" onclick=\"loadIframe('menu.php?sis=i','menu','".$invDirPath."abertura.php','centro',2,'INVMON')\">&nbsp;".TRANS('MNS_INVENTARIO')."&nbsp;</a></td>"; //abertura.php   -   ".$invDirPath."".$invHome."
+
+
+
+//invmon---------------
+
+if ($_SESSION['s_invmon']==1){
+//inventario
+include ("includes/menu/quickmenu-4.php");
+
 			if ($sis=="") $sis="sis=i";
 			if ($sisPath=="") $sisPath=$invDirPath;
-			$sistem = "abertura.php";
+//			$sistem = "abertura.php";
 			if ($marca=="") $marca = "INVMON";
 			//$home = "home=true";
-		} else
-			print "<td width='7%' STYLE='{border-right: thin solid #C7C8C6; color:#C7C8C6}'>&nbsp;".TRANS('MNS_INVENTARIO')."&nbsp;</td>";
-// 		if ($_SESSION['s_nivel']==1) {
-// 			print "<td id='ADMIN' width='5%'  class='barraMenu'><a class='barra' onMouseOver=\"destaca('ADMIN')\" onMouseOut=\"libera('ADMIN')\" onclick=\"loadIframe('menu.php?sis=a','menu','','','1','ADMIN')\">&nbsp;".TRANS('MNS_ADMIN')."&nbsp;</a></td>";
-// 			if ($sis=="") $sis="sis=a";
-// 			if ($sisPath=="") $sisPath="";
-// 			if ($sistem=="") $sistem = "menu.php";
-// 			if ($marca=="")$marca = "ADMIN";
-// 			//$home = "home=true";
-// 		} 
-		
-		if ($_SESSION['s_nivel']==1 || (isset($_SESSION['s_area_admin']) && $_SESSION['s_area_admin'] == '1')) {
-			print "<td id='ADMIN' width='5%'  class='barraMenu'><a class='barra' onMouseOver=\"destaca('ADMIN')\" onMouseOut=\"libera('ADMIN')\" onclick=\"loadIframe('menu.php?sis=a','menu','','','2','ADMIN')\">&nbsp;".TRANS('MNS_ADMIN')."&nbsp;</a></td>";
+		} 
+else
+			print "<li><a class=\"qmparent\" href=\"javascript:void(0);\">Inventario</a></li>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//admin------------
+if ($_SESSION['s_nivel']==1 || (isset($_SESSION['s_area_admin']) && $_SESSION['s_area_admin'] == '1')) {
+
+
+//relatorios
+include ("includes/menu/quickmenu-3.php");
+//admin
+include ("includes/menu/quickmenu-5.php");
+
+
 			if ($sis=="") $sis="sis=a";
 			if ($sisPath=="") $sisPath="";
 			if ($sistem=="") $sistem = "menu.php";
 			if ($marca=="")$marca = "ADMIN";
 			//$home = "home=true";
 		} else
-			print "<td width='5%' STYLE='{border-right: thin solid #C7C8C6; color:#C7C8C6}'>&nbsp;".TRANS('MNS_ADMIN')."&nbsp;</td>";
+			print "<li><a class=\"qmparent\" href=\"javascript:void(0);\">Admin</a></li>";
+//
 
-		print "<td width='72%'></td>";
-		$conec->desconecta('MYSQL');
-	}
-	print "</tr></table>";
+	$conec->desconecta('MYSQL');
 
-print "</td></tr>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+include ("includes/menu/quickmenu-6.php");
+
+
+
+
+
+
+
+
+	} //fim do menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print "</td></tr>"; //cabecalho
+
+
+
+
+
+
+
+
 
 
 
@@ -193,12 +329,21 @@ if ($_SESSION['s_logado']){
  	}else
  		$PARAM = "";
 
-	print "<tr><td style=\"{width:15%;}\" id='centro'>";//id='centro'
-	print "<iframe class='frm_menu' src='menu.php?".$sis."".$PARAM."' name='menu' align='left' width='100%' height='100%' frameborder='0' STYLE='{border-right: thin solid #999999; border-bottom: thin solid #999999;}'></iframe>";
-	print "</td>";
-	print "<td style=\"{width:100%;}\" id='centro2'><iframe class='frm_centro' src='".$sisPath."".$sistem."'  name='centro' align='center' width='100%' height='100%' frameborder='0' STYLE='{border-bottom: thin solid #999999;}'></iframe></td>";
+//	print "<tr><td style=\"{width:15%;}\" id='centro'>";//id='centro'
+//	print "<iframe class='frm_menu' src='menu.php?".$sis."".$PARAM."' name='menu' align='left' width='100%' height='100%' frameborder='0' STYLE='{border-right: thin solid #999999; border-bottom: thin solid #999999;}'></iframe>";
+//	print "</td>";
+
+	print "<tr height='100%'><td style=\"{width:100%;}\" id='centro2'><iframe class='frm_centro' src='".$sisPath."".$sistem."'  name='centro' align='center' width='100%' height='100%' frameborder='0' STYLE='{border-bottom: thin solid #999999;}'></iframe></td>";
 	print "</tr>";
-	} else {
+	} 
+/*******************************************************************************
+@@jefersondossantos@gmail.com 2010/10/11
+Criado novo sistema de login usando o arquivo login.php. esse codigo será mantido
+ainda apenas para efeitos de comparação.
+
+
+
+else {
 		//print "<form name='logar' method='post' action='".$commonPath."login.php?=".session_id()."' onSubmit=\"return valida()\">";
 		print "<form name='logar' method='post' action='".$commonPath."login.php?".session_id()."' onSubmit=\"return valida()\">";
 		print "<tr><td ><table id='login'>";
@@ -226,8 +371,12 @@ if ($_SESSION['s_logado']){
 
 
 		print "</form>";
+
 	}
-print "<tr><td colspan='2' align='center'><a href='http://ocomonphp.sourceforge.net' target='_blank'>OcoMon</a> - ".TRANS('MNS_MSG_OCOMON').".<br>".TRANS('MNS_MSG_VERSAO').": ".VERSAO." - ".TRANS('MNS_MSG_LIC')." GPL</td></tr>";
+*/
+
+/******************************************************************************/
+print "<tr height='24'><td colspan='2' align='center'><a href='http://ocomonphp.sourceforge.net' target='_blank'>OcoMon</a> - ".TRANS('MNS_MSG_OCOMON').".<br>".TRANS('MNS_MSG_VERSAO').": ".VERSAO." - ".TRANS('MNS_MSG_LIC')." GPL</td></tr>";
 print "</table>";
 
 print "</body></html>";

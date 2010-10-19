@@ -1,0 +1,63 @@
+body {
+background-color: #F9F9F9;
+margin:0;
+padding:0;
+text-align:center; /* hack para o IE */	
+
+
+	}
+#tudo {
+
+width: 300px;
+margin:0 auto;			
+padding: 20px;
+text-align:left; /* "remédio" para o hack do IE */	
+	}
+#logotipo {
+	height: 200px;
+	width:300px;
+	padding-bottom: 5px;
+
+	}
+
+#conteudo {
+padding: 5px;
+background-color: #fff;
+border-style:solid;
+border-width:thin;
+border-color:#000;
+
+	}
+
+
+label {
+	margin-left:30px;
+	color: #777;
+	font-size: 13px;
+}
+
+
+input[type=text] {
+	background: #FBFBFB;
+	border: 1px solid #E5E5E5;
+	margin-bottom: 16px;
+	font-size: 24px;
+	width: 220px;
+	height:28px;
+	margin-left:30px;
+}
+input[type=password] {
+	background: #FBFBFB;
+	border: 1px solid #E5E5E5;
+	margin-bottom: 16px;
+
+	font-size: 24px;
+	width: 220px;
+	height:28px;
+	margin-left:30px;
+}
+
+input[type=submit] {
+	margin-left:210px;
+	color: #555;
+	}
