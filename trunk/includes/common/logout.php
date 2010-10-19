@@ -19,5 +19,11 @@
   */
         session_start();
         session_destroy();
-	print "<script>window.location.href='../../index.php';</script>";
+/*
+@ jefersondossantos@gmail.com 
+@@ 2010/10/11 
+Código alterado para ser compatível com a mudança do formulário de login,
+que deixou de ficar no index.php e foi movido para o login.php
+*/
+	print "<script>window.location.href='../../login.php';</script>";
 ?>
