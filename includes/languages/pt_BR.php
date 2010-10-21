@@ -283,7 +283,7 @@ $TRANS['MENU_INVENTARY'] = "Invent&aacute;rio"	;
 
 
 
-$TRANS['MENU_ADMIN'] = 'Administra&ccedil;&acedil;0';
+$TRANS['MENU_ADMIN'] = 'Administra&ccedil;&atilde;o';
 
 	$TRANS['MENU_ADMIN_CONFIG'] = 'Configura&ccedil;&otilde;es';
 		$TRANS['MENU_ADMIN_CONFIG_GENERALS'] = 'Gerais';
@@ -309,18 +309,18 @@ $TRANS['MENU_ADMIN'] = 'Administra&ccedil;&acedil;0';
 
 
 	$TRANS['MENU_ADMIN_INVENTARY'] = 'Invent&aacute;rio';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Equipamentos';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Componentes';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Fabricantes';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Fornecedores';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Situa&ccedil;&otilde;es';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Garantias';
-		$TRANS['MENU_ADMIN_INVENTARY_'] = 'Softwares';
-	$TRANS['MENU_ADMIN'] = 'Usu&aacute;rios';
-	$TRANS['MENU_ADMIN'] = 'Locais';
-	$TRANS['MENU_ADMIN'] = 'unidades';
-	$TRANS['MENU_ADMIN'] = 'Centros de custo';
-	$TRANS['MENU_ADMIN'] = 'Permiss&otilde;es';
+		$TRANS['MENU_ADMIN_INVENTARY_EQUIPMENTS'] = 'Equipamentos';
+		$TRANS['MENU_ADMIN_INVENTARY_COMPONENTS'] = 'Componentes';
+		$TRANS['MENU_ADMIN_INVENTARY_MANUFACTURER'] = 'Fabricantes';
+		$TRANS['MENU_ADMIN_INVENTARY_SUPLLIERS'] = 'Fornecedores';
+		$TRANS['MENU_ADMIN_INVENTARY_SITUATIONS'] = 'Situa&ccedil;&otilde;es';
+		$TRANS['MENU_ADMIN_INVENTARY_WARRANTIES'] = 'Garantias';
+		$TRANS['MENU_ADMIN_INVENTARY_SOFTWARES'] = 'Softwares';
+	$TRANS['MENU_ADMIN_USERS'] = 'Usu&aacute;rios';
+	$TRANS['MENU_ADMIN_INSTITUTIONS'] = 'Locais';
+	$TRANS['MENU_ADMIN_UNITS'] = 'unidades';
+	$TRANS['MENU_ADMIN_COST_CENTERS'] = 'Centros de custo';
+	$TRANS['MENU_ADMIN_PERMISSIONS'] = 'Permiss&otilde;es';
 
 /* Fim do Menu */
 /******************************************************************************/
