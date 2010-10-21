@@ -1,4 +1,4 @@
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`ocomon_rc6` /*!40100 DEFAULT CHARACTER SET utf8 */;
+﻿CREATE DATABASE /*!32312 IF NOT EXISTS*/`ocomon_rc6` /*!40100 DEFAULT CHARACTER SET utf8 */;
 CREATE USER 'ocomon'@'localhost' IDENTIFIED BY 'senha_ocomon_mysql';
 GRANT SELECT , INSERT , UPDATE , DELETE ON `ocomon_rc6` . * TO 'ocomon'@'localhost';USE `ocomon_rc6`;
 
@@ -1636,11 +1636,11 @@ INSERT INTO `status` VALUES (1, 'Aguardando atendimento', 2, 2);
 INSERT INTO `status` VALUES (2, 'Em atendimento', 2, 1);
 INSERT INTO `status` VALUES (3, 'Em estudo', 2, 1);
 INSERT INTO `status` VALUES (4, 'Encerrada', 4, 3);
-INSERT INTO `status` VALUES (7, 'Agendado com usuÁrio', 1, 2);
+INSERT INTO `status` VALUES (7, 'Agendado com usu&aacute;rio', 1, 2);
 INSERT INTO `status` VALUES (12, 'Cancelado', 4, 3);
 INSERT INTO `status` VALUES (15, 'Todos', 4, 2);
-INSERT INTO `status` VALUES (16, 'Aguardando feedback do usuÁrio', 1, 2);
-INSERT INTO `status` VALUES (19, 'IndisponÍvel para atendimento', 1, 2);
+INSERT INTO `status` VALUES (16, 'Aguardando feedback do usu&aacute;rio', 1, 2);
+INSERT INTO `status` VALUES (19, 'Indispon&iacute;vel para atendimento', 1, 2);
 INSERT INTO `status` VALUES (21, 'Encaminhado para operador', 2, 1);
 INSERT INTO `status` VALUES (22, 'Interrompido para atender outro chamado', 2, 1);
 INSERT INTO `status` VALUES (25, 'Aguardando retorno do fornecedor', 3, 1);
@@ -1891,7 +1891,9 @@ CREATE TABLE `config` (
 `conf_auth_type` VARCHAR( 30 ) NOT NULL DEFAULT 'SYSTEM',
 `conf_upld_size` INT( 10 ) NOT NULL DEFAULT '307200',
 `conf_upld_width` INT( 5 ) NOT NULL DEFAULT '800',
-`conf_upld_height` INT( 5 ) NOT NULL DEFAULT '600'
+`conf_upld_height` INT( 5 ) NOT NULL DEFAULT '600',
+`conf_enterprise` VARCHAR( 100 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header e rodape'
+
 ) TYPE = MYISAM COMMENT = 'Tabela de configurações diversas do sistema';
 
 
