@@ -73,6 +73,19 @@
 				print "<td>".$row['conf_ocomon_site']."</td>";
 				print "</tr>";
 				print "<tr><td colspan='2'>&nbsp;</td></tr>";
+				
+				/*@jefersondossantos@gmail.com
+				@2010/10/20
+				@21:32
+				@acrescentado campo para inserção do nome da empresa, que vai constar em varios lugares, como o header e rodapé
+				*/
+				/*--------------------------------------------*/				
+				print "<tr><td><b>".TRANS('OPT_ENTERPRISE')."</b></td>";
+				print "<td>".$row['conf_enterprise']."</td>";
+				print "</tr>";
+				print "<tr><td colspan='2'>&nbsp;</td></tr>";
+				/*--------------------------------------------*/				
+
 
 				print "<tr><td><b>".TRANS('OPT_REG_PAG')."</b></td>";
 				print "<td>".$row['conf_page_size']."</td>";
@@ -270,6 +283,12 @@
 		print "<td><input type='text' name='site' id='idSite' class='text' value='".$row['conf_ocomon_site']."'></td>";
 		print "</tr>";
 		print "<tr><td colspan='2'>&nbsp;</td></tr>";
+
+		print "<tr><td><b>".TRANS('OPT_ENTERPRISE')."</b></td>";
+		print "<td><input type='text' name='enterprise' id='idempresa' class='text' value='".$row['conf_enterprise']."'></td>";
+		print "</tr>";
+		print "<tr><td colspan='2'>&nbsp;</td></tr>";
+
 
 
 		print "<tr><td><b>".TRANS('OPT_REG_PAG')."</b></td>";
@@ -545,6 +564,7 @@
 
 		$qry = "UPDATE config SET ".
 				"conf_ocomon_site = '".noHtml($_POST['site'])."', ".
+				"conf_enterprise = '".noHtml($_POST['enterprise'])."', ".
 				"conf_upld_size= '".$_POST['size']."', conf_upld_width = '".$_POST['width']."', ".
 				"conf_upld_height = '".$_POST['height']."', conf_formatBar='".$conf_formatBar."', ".
 				"conf_page_size = '".$_POST['page']."', ".

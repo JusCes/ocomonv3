@@ -122,7 +122,7 @@ include ("PATHS.php");
 </div>
 
 <div class="button_area_left">      
-	  <a href="ocomon/geral/relatorios.php" target="centro" class="button"><img src="includes/images/menu-reports.png" width="32" height="32" /></a><a href="ocomon/geral/relatorios.php" target="centro">Relatórios</a> </div>
+	  <a href="ocomon/geral/relatorios.php" target="centro" class="button"><img src="includes/images/menu-reports.png" width="32" height="32" /></a><a href="admin/geral/config_list.php" target="centro">Relatórios</a> </div>
 
    
 

@@ -325,26 +325,34 @@ $TRANS['MENU_ADMIN'] = 'Administra&ccedil;&acedil;0';
 /* Fim do Menu */
 /******************************************************************************/
 
+/*@jefersondossantos@gmail.com
+@2010/10/20
+@21:35
+-Inserido nova linha de tradução para o nome da empresa. OPT_ENTERPRISE
+-Removida a caixa alta. Isso dá a impressão de estar gritando.
+*/
+
 
 
 $TRANS['TTL_CONFIG_GERAL'] = "Configura&ccedil;&otilde;es gerais do sistema";
 $TRANS['TTL_CONFIG_USER_SCREEN']="Configura&ccedil;&atilde;o para abertura de chamados pelo usu&aacute;rio final";
 
-$TRANS['OPT_SITE'] = "SITE PARA ACESSO AO OCOMON";
-$TRANS['OPT_REG_PAG'] = "REGISTROS POR P&aacute;GINA";
-$TRANS['OPT_UPLOAD'] = "UPLOAD DE IMAGENS";
-$TRANS['OPT_MAXSIZE']	= "TAMANHO M&aacute;XIMO";
-$TRANS['OPT_MAXWIDTH'] = "LARGURA M&aacute;XIMA";
-$TRANS['OPT_MAXHEIGHT'] = "ALTURA M&aacute;XIMA";
-$TRANS['OPT_BARRA']="BARRA DE FORMATA&ccedil;&atilde;O DE TEXTOS";
-$TRANS['OPT_MURAL']="MURAL";
-$TRANS['OPT_OCORRENCIAS']="OCORR&ecirc;NCIAS";
-$TRANS['OPT_PROB_CATEG']="CATEGORIAS DE PROBLEMAS";
-$TRANS['OPT_PROB_LABEL1']="CATEGORIA 1 - LABEL";
-$TRANS['OPT_PROB_LABEL2']="CATEGORIA 2 - LABEL";
-$TRANS['OPT_PROB_LABEL3']="CATEGORIA 3 - LABEL";
-$TRANS['OPT_ESQUEMA_CORES']="ESQUEMAS DE CORES";
-$TRANS['OPT_ESQUEMA_PERMITE_USERS']="PERMITE QUE USU&aacute;RIOS SELECIONEM ESQUEMAS";
+$TRANS['OPT_ENTERPRISE'] = "Nome da empresa";
+$TRANS['OPT_SITE'] = "Site para acesso ao ocomon";
+$TRANS['OPT_REG_PAG'] = "Registros por P&aacute;gina";
+$TRANS['OPT_UPLOAD'] = "Upload de mensagens";
+$TRANS['OPT_MAXSIZE']	= "Tamanho m&aacute;ximo";
+$TRANS['OPT_MAXWIDTH'] = "Largura m&aacute;xima";
+$TRANS['OPT_MAXHEIGHT'] = "Altura m&aacute;xima";
+$TRANS['OPT_BARRA']="Bara de formata&ccedil;&atilde;o de textos";
+$TRANS['OPT_MURAL']="Mural";
+$TRANS['OPT_OCORRENCIAS']="Chamados";
+$TRANS['OPT_PROB_CATEG']="Categorias de problemas";
+$TRANS['OPT_PROB_LABEL1']="Categoria 1 - r&oacute;tulo";
+$TRANS['OPT_PROB_LABEL2']="Categoria 2 - r&oacute;tulo";
+$TRANS['OPT_PROB_LABEL3']="Categoria 3 - r&oacute;tulo";
+$TRANS['OPT_ESQUEMA_CORES']="Esquemas de cores";
+$TRANS['OPT_ESQUEMA_PERMITE_USERS']="Permitir que usu&aacute;rios selecionem esquemas";
 $TRANS['OPT_DIRETIVA']="Diretiva";
 $TRANS['OPT_VALOR']="Valor";
 $TRANS['OPT_ALLOW_USER_OPEN']="Permite que usu&aacute;rios abram chamados";
@@ -414,7 +422,7 @@ $TRANS['OCO_FIELD_USER']="Usu&aacute;rio";
 $TRANS['TTL_QUICK_SCH']="Busca de Ocorr&ecirc;ncias";
 $TRANS['OCO_FIELD_NUMBER']="N&uacute;mero";
 $TRANS['NUMBER_PLURAL']="(s)";
-$TRANS['OPT_LANG']="ARQUIVO DE IDIOMA";
+$TRANS['OPT_LANG']="Arquivo de idioma";
 $TRANS['OPT_AREAS_CUSTON']="&aacute;reas que ter&atilde;o a tela customizada";
 $TRANS['OPT_FIELD_AREA']="Campo: &aacute;REA";
 $TRANS['OPT_FIELD_PROB']="Campo: PROBLEMA";
@@ -450,7 +458,7 @@ $TRANS['TTL_CONFIG_MAIL']="Configura&ccedil;&atilde;o global para envio de e-mai
 $TRANS['TTL_CONFIG_SEND_MAIL']="Configura&ccedil;&atilde;o para envio de e-mails";
 
 $TRANS['REP_CALL_X_PROBCAT']="CHAMADOS X CATEGORIAS DE PROBLEMAS";
-$TRANS['OPT_DATE_FORMAT']="FORMATO DE DATA";
+$TRANS['OPT_DATE_FORMAT']="Formato de data";
 $TRANS['ADM_AREAS']="Administra&ccedil;&atilde;o de &aacute;reas de Atendimento";
 
 $TRANS['COL_AREA']="&aacute;rea";
@@ -516,8 +524,8 @@ $TRANS['OPT_DEL']="EXCLUIR";
 $TRANS['SQUEMA_NAME']="Nome do para o esquema";
 $TRANS['UPDATE_SQUEMA']="Atualiza esquema caso j&aacute; exista";
 $TRANS['BT_SAVE']= "Salvar";
-$TRANS['OPT_UPLOAD_TYPE']="TIPOS DE ARQUIVOS PERMITIDOS";
-$TRANS['OPT_UPLOAD_TYPE_IMG']="IMAGENS (jpg, jpeg, bmp, gif ou png)";
+$TRANS['OPT_UPLOAD_TYPE']="Tipos de arquvos permitidos";
+$TRANS['OPT_UPLOAD_TYPE_IMG']="Imagens (jpg, jpeg, bmp, gif ou png)";
 $TRANS['OPT_UPLOAD_TYPE_TXT']="TXT";
 $TRANS['OPT_UPLOAD_TYPE_PDF']="PDF";
 $TRANS['OPT_UPLOAD_TYPE_ODF']="Arquivos ODF (odt, ods, odp, odg)";
@@ -1784,8 +1792,8 @@ $TRANS['ASSOC_EQUIP_PIECES']="Equipamento associado";
 $TRANS['SUBTTL_DETAIL_ITEM_SUPPLY']="Detalhes do componente cadastrado";
 $TRANS['SUBTTL_SHOW_ALL'] = "Listagem geral";
 $TRANS['OPT_SEND_MAIL_WRTY']="ALERTA SOBRE VENCIMENTO DE GARANTIA";
-$TRANS['OPT_DAYS_BEFORE']="DIAS DE ANTEC&ecirc;NCIA PARA ALERTAR SOBRE VENCIMENTO DA GARANTIA (0 para desativar)";
-$TRANS['OPT_SEL_AREA']="&aacute;REA QUE RECEBE OS E-MAILS DE ALERTA";
+$TRANS['OPT_DAYS_BEFORE']="Dias de anteced&ecirc;ncia para alertar sobre vencimento de garantia (0 para desativar)";
+$TRANS['OPT_SEL_AREA']="&Aacute;rea que recebe e-mails de alerta";
 $TRANS['LINK_SEARCH_ITEM'] = "Pesquisar componentes";
 $TRANS['SUBTTL_SEARCH_ITEM_SUPPLY'] = "Pesquisa por componentes avulsos";
 $TRANS['MNL_CON_ITEM'] = "Pesquisa estoque";
@@ -1794,12 +1802,12 @@ $TRANS['ADM_WARRANTY']="Administra&ccedil;&atilde;o de per&iacute;odos de garant
 $TRANS['CADASTRE_TEMPO_GARANTIA']="Cadastro de tempo de garantia";
 $TRANS['TXT_MONTH']="meses";
 $TRANS['FIELD_TIME_MONTH'] = "TEMPO EM MESES";
-$TRANS['OPT_REOPEN']="REABERTURA DE CHAMADOS";
-$TRANS['OPT_ALLOW_REOPEN']="PERMITE A REABERTURA DE CHAMADOS";
+$TRANS['OPT_REOPEN']="Reabertura de chamados";
+$TRANS['OPT_ALLOW_REOPEN']="Permite a reabertura de chamados";
 $TRANS['OCO_ALL_AREAS']="TODAS";
 
-$TRANS['OPT_DATE_EDIT']="EDI&ccedil;&atilde;O DE DATAS";
-$TRANS['OPT_ALLOW_DATE_EDIT']="PERMITE QUE O ADMINISTRADOR ALTERE AS DATAS MANUALMENTE";
+$TRANS['OPT_DATE_EDIT']="Edi&ccedil;&atilde;o de datas";
+$TRANS['OPT_ALLOW_DATE_EDIT']="Pemitir ao administrador alterar as datas manualmente";
 $TRANS['MNL_DEPEND'] = "Depend&ecirc;ncia";
 $TRANS['HNT_VALID_TIME'] = "Tempo v&aacute;lido";
 $TRANS['HNT_RESPONSE_TIME'] = "Tempo de Resposta";
@@ -1814,14 +1822,14 @@ $TRANS['OCO_FIELD_SCHEDULED_TO']="Agendado para";
 $TRANS['OPT_FIELD_SCHEDULE']="Campo: AGENDAR";
 $TRANS['MSG_SUCCES_ALTER']="Registro alterado com sucesso";
 $TRANS['OPT_SUCCES_CONFIG']="Configura&ccedil;&atilde;o alterada com sucesso";
-$TRANS['OPT_SCHEDULE']="AGENDAMENTO DE CHAMADOS";
-$TRANS['OPT_SCHEDULE_STATUS']="STATUS PARA OS CHAMADOS AGENDADOS NA ABERTURA";
-$TRANS['OPT_SCHEDULE_STATUS_2']="STATUS PARA OS CHAMADOS AGENDADOS NA EDI&ccedil;&atilde;O";
+$TRANS['OPT_SCHEDULE']="Agendamento de chamados";
+$TRANS['OPT_SCHEDULE_STATUS']="Status para os chamados agendados na abertura";
+$TRANS['OPT_SCHEDULE_STATUS_2']="Status para os chamados agendados na edi&ccedil;&atilde;o";
 $TRANS['OCO_NOT_SCHEDULED_CALLS']="N&atilde;o existem ocorr&ecirc;ncias agendadas no sistema";
 $TRANS['RE-SCHEDULE']="Re-agendar";
 $TRANS['OCO_FIELD_FOWARD']="Encaminhar o chamado para";
-$TRANS['OPT_FOWARD_STATUS']="ENCAMINHAMENTO DE CHAMADOS NA ABERTURA";
-$TRANS['SEL_FOWARD_STATUS']="STATUS DEFINIDO PARA OS CHAMADOS ENCAMINHADOS NA ABERTURA";
+$TRANS['OPT_FOWARD_STATUS']="Encaminhamento de chamados na abertura";
+$TRANS['SEL_FOWARD_STATUS']="Status para chamados encaminhados na abertura";
 $TRANS['OPT_FIELD_FOWARD']="Campo: ENCAMINHAR";
 $TRANS['MSG_UNIT_TAG']="Os campos Unidade e etiqueta devem ser preenchidos";
 $TRANS['COL_TECHNICIAN']="T&eacute;cnico respons&aacute;vel";
@@ -1983,8 +1991,8 @@ $TRANS['COL_ALIMENTA_BANCO_SOLUCAO']="Alimenta banco de solu&ccedil;&otilde;es";
 $TRANS['COL_JUSTIFICATION']="Justificativa";
 $TRANS['TXT_JUSTIFICATION']="Justificativa para o estouro do SLA";
 $TRANS['ALERT_TOO_SHORT_JUSTIFICATION'] = "Justificativa muito curta!";
-$TRANS['OPT_JUSTIFICATION_SLA_OUT']="JUSTIFICAR CHAMADOS COM TEMPO DE SOLU&ccedil;&atilde;O &agrave;CIMA DO SLA";
-$TRANS['OPT_DESC_SLA_OUT']="JUSTIFICATIVA OBRIGAT&oacute;RIA";
+$TRANS['OPT_JUSTIFICATION_SLA_OUT']="Justificar chamados com tempo de solu&ccedil;&atilde;o &agrave;cima doSLA";
+$TRANS['OPT_DESC_SLA_OUT']="Justificativa obrigat&oacute;ria";
 $TRANS['COL_REMAIN_TIME']="Tempo Restante";
 $TRANS['HNT_REMAIN_TIME_IN_SLA']="Tempo restante dentro do SLA";
 
@@ -2006,7 +2014,7 @@ $TRANS['MSG_NOT_EXCLUDED_PROBLEM']="N&atilde;o foi poss&iacute;vel excluir o v&i
 $TRANS['MSG_NOT_EXCLUDED_LINKS']=" Por&eacute;m n&atilde;o foi poss&iacute;vel excluir os v&iacute;nculos na tabela prob_x_script! Esse processo dever&aacute; ser feito manualmente.";
 $TRANS['LINK_TO_PROBLEM']="Associar a um/outro tipo de problema";
 
-$TRANS['OPT_QTD_MAX_ANEXOS'] = "N&uacute;MERO M&aacute;XIMO DE ANEXOS POR VEZ";
+$TRANS['OPT_QTD_MAX_ANEXOS'] = "N&uacute;mero m&aacute;ximo de anexos por vez";
 $TRANS['ATTACH_ANOTHER'] = "Anexar outro";
 
 
