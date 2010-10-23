@@ -89,6 +89,9 @@ if(!isset($_SESSION['s_usuario']) ||
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link href="includes/css/styles.css" rel="stylesheet" type="text/css" />
+
+
+
 <?php
 include ("PATHS.php");
 ?>
@@ -100,9 +103,12 @@ include ("PATHS.php");
 	text-align: center;
 }
 </style>
+
+<script src="includes/javascript/quickmenu.js" type="text/javascript"></script>
 </head>
 
 <body>
+
 
 <div class="container">
   <div class="header">
