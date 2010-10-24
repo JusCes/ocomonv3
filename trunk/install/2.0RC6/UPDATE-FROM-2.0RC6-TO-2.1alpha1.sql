@@ -15,4 +15,4 @@ UPDATE  `status` SET  `status` =  'Agendado com usu&aacute;rio' WHERE  `status`.
 UPDATE  `status` SET  `status` =  'Aguardando feedback do usu&aacute;rio' WHERE  `status`.`stat_id` =16;
 UPDATE  `status` SET  `status` =  'Indispon&iacute;vel para atendimento' WHERE  `status`.`stat_id` =19;
 
-ALTER TABLE  `config` ADD  `conf_enterprise` VARCHAR( 100 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header e rodape'
+ALTER TABLE  `config` ADD  `conf_support_name` VARCHAR( 80 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header,rodape e mensagens'

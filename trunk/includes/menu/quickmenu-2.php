@@ -1,5 +1,5 @@
 
-	<li><a class="qmparent" href="ocomon/geral/abertura.php" target="centro">Ocorrencias</a>
+	<li><a class="qmparent" href="ocomon/geral/abertura.php" target="centro"><?php echo $TRANS['TICKET_NAME']?></a>
 
 		<ul>
 		<li><a href="ocomon/geral/incluir.php" target="centro"><?php echo $TRANS['MENU_NEW_TICKET']?></li>

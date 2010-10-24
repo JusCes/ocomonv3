@@ -150,6 +150,17 @@ padding:4px;
 }
 
 
+.direitacentro {
+    position: fixed;
+    width: 150px;
+    border: solid 1px #e1e1e1;
+    vertical-align: middle;
+    background: #ffdab9;
+    text-align: center;
+    top: 10px;
+    left: 10px;
+}
+
 
 
 

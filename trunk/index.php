@@ -83,6 +83,7 @@ if(!isset($_SESSION['s_usuario']) ||
  
 ?>
 <?php include("includes/languages/pt_BR.php")?>
+<?php include("includes/languages/pt_BR_v3.php")?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -119,7 +120,7 @@ include ("PATHS.php");
         
 <div class="button_area_left">
 		<a href="ocomon/geral/incluir.php" target="centro" class="button"><img src="includes/images/menu-add.png" width="32" height="32" /></a>
-		<a href="ocomon/geral/incluir.php" target="centro">Novo Chamado</a>
+		<a href="ocomon/geral/incluir.php" target="centro"><?php echo $TRANS['MENU_NEW_TICKET']?></a>
 </div>
 
 <div class="button_area_left">

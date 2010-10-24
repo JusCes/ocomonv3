@@ -1892,7 +1892,7 @@ CREATE TABLE `config` (
 `conf_upld_size` INT( 10 ) NOT NULL DEFAULT '307200',
 `conf_upld_width` INT( 5 ) NOT NULL DEFAULT '800',
 `conf_upld_height` INT( 5 ) NOT NULL DEFAULT '600',
-`conf_enterprise` VARCHAR( 100 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header e rodape'
+`conf_support_name` VARCHAR( 80 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header, e rodape e mensagens'
 
 ) TYPE = MYISAM COMMENT = 'Tabela de configurações diversas do sistema';
 
