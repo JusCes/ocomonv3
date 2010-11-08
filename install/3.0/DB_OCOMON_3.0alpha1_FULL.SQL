@@ -1794,6 +1794,7 @@ CREATE TABLE `mailconfig` (
 `mail_issmtp` INT( 1 ) DEFAULT '1' NOT NULL ,
 `mail_host` VARCHAR( 40 ) DEFAULT 'mail.smtp.com' NOT NULL ,
 `mail_isauth` INT( 1 ) DEFAULT '0' NOT NULL ,
+`mail_port` SMALLINT( 5 ) DEFAULT '25' NOT NULL,
 `mail_user` VARCHAR( 20 ) ,
 `mail_pass` VARCHAR( 50 ) ,
 `mail_from` VARCHAR( 40 ) DEFAULT 'ocomon@yourdomain.com' NOT NULL ,
@@ -1893,6 +1894,7 @@ CREATE TABLE `config` (
 `conf_upld_width` INT( 5 ) NOT NULL DEFAULT '800',
 `conf_upld_height` INT( 5 ) NOT NULL DEFAULT '600',
 `conf_support_name` VARCHAR( 80 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header, e rodape e mensagens'
+`conf_ticket_term` tinyint( 2 ) NOT NULL COMMENT  'Definição de como os registros vão ser chamados'
 
 ) TYPE = MYISAM COMMENT = 'Tabela de configurações diversas do sistema';
 

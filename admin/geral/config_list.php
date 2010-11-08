@@ -5,6 +5,8 @@ include ("../../includes/include_geral_II.inc.php");
 include ("../../includes/languages/pt_BR.php");
 include ("../../includes/languages/pt_BR_v3.php");
 
+include ("../../includes/classes/mount.php");
+
 
 $_SESSION['s_page_admin'] = $_SERVER['PHP_SELF'];
 	$auth = new auth;
@@ -214,113 +216,38 @@ label {
 
 <!-- ------------------------------------------------------------------- -->
 
-<div class="form_group">
-<label><?php echo $TRANS['LABEL_LANGUAGE_FILE'] ?></label>
-        
-        <select
-		name='lang'
-		id='idLang'
-		class='select'
-		
-	>                         
-		        <?php
-		                for ($i=0; $i<count($files); $i++){
-		                print "<option value='".$files[$i]."' ";
-		                if ($files[$i]==$row['conf_language'])
-		                print " selected";
-		                print ">".$files[$i]."</option>";
-		                }
-        	        ?>
 
+<?php
 
-        </select>
-<span class="hint"> <?php echo $TRANS['HINT_LANGUAGE_FILE']?><span class="hint-pointer">&nbsp;</span></span>
-</div>
+mount_select(language_file,conf_language);
 
-<!-- ------------------------------------------------------------------- -->
+//mount_textbox(Nome a ser dado e usado no final para linkar com o banco de dados, nome do campo do banco de dados de onde puxar a informação)
+mount_textbox(date_format,conf_date_format);
 
-<div class="form_group">        
+mount_textbox(site,conf_ocomon_site);
 
-<!--formato de data -->
-<label>     <?php echo $TRANS['LABEL_DATE_FORMAT']?></label>
-        
-    <input 
-	type='text'
-	name='date_format'
-	id='idDate_format'
-	class='textbox'
-	value='<?php echo $row['conf_date_format']?>'>
-        
-<span class="hint"> <?php echo $TRANS['HINT_DATE_FORMAT']?><span class="hint-pointer">&nbsp;</span></span>
-</div>
-
-<!-- ------------------------------------------------------------------- -->
-<div class="form_group">
-    
-<!--site do ocomon -->
-<label><?php echo $TRANS['LABEL_SITE'] ?></label>
-        
-        <input 
-		type='text'
-		name='site'
-		id='idSite'
-		class='textbox'
-		value='<?php echo $row['conf_ocomon_site']?>'
-	>
-   <span class="hint"> <?php echo $TRANS['HINT_SITE']?><span class="hint-pointer">&nbsp;</span></span>     
-</div>
-<!-- ------------------------------------------------------------------- -->
-
-
-<div class="form_group">        
-
-<!--Nome do sistema de Suporte -->
-<label>     <?php echo $TRANS['LABEL_SUPPORT_NAME']?></label>
-        
-    <input 
-	type='text'
-	name='support_name'
-	id='idsupportname'
-	class='textbox'
-	value='<?php echo $row['conf_support_name']?>'>
-        
-      <span class="hint"> <?php echo $TRANS['HINT_SUPPORT_NAME']?><span class="hint-pointer">&nbsp;</span></span>  
-</div>
-
-<!-- ------------------------------------------------------------------- -->
-
+mount_textbox(support_name,conf_support_name);
+?>
 
 
 </fieldset>
 
-
-
-
-
 <fieldset>
 <legend><span><?php echo $TRANS['LEGEND_TICKET_CONFIGS']?></span></legend>
 
+<?php
+mount_textbox(reg_page,conf_page_size)
 
-<div class="form_group">
+?>
 
-<!--registros por pagina -->
-<label><?php echo $TRANS['OPT_REG_PAG'] ?></label>
-        
-        <input type='text' class='textbox' name='page' id='idPage' value='<?php echo $row['conf_page_size']?>'>
-</div>
 <!-- ------------------------------------------------------------------- -->
-<div class="form_group">
-<label><?php echo $TRANS['LABEL_ADMIN_CHANGE_DATES']?></label>
-        
-                <?php   
-                        if ($row['conf_allow_date_edit']) {
-                                $allowDateEd = " checked ";
-                        } else {
-                                $allowDateEd = "";
-                        }
-                        print "<input type='checkbox' class='checkbox' name='allowDateEdit' ".$allowDateEd;">"
-                ?>
-</div>
+
+<?php
+
+mount_checkbox(admin_change_dates,conf_allow_date_edit)
+
+?>
+
 <!-- ------------------------------------------------------------------- -->
 <div class="form_group">
 

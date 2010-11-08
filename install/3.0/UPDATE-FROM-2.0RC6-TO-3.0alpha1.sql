@@ -16,3 +16,7 @@ UPDATE  `status` SET  `status` =  'Aguardando feedback do usu&aacute;rio' WHERE 
 UPDATE  `status` SET  `status` =  'Indispon&iacute;vel para atendimento' WHERE  `status`.`stat_id` =19;
 
 ALTER TABLE  `config` ADD  `conf_support_name` VARCHAR( 80 ) DEFAULT 'ocomon' NOT NULL COMMENT  'Nome que vai aparecer no header,rodape e mensagens'
+ALTER TABLE  `config` ADD `conf_ticket_term` tinyint( 2 ) NOT NULL COMMENT  'Definição de como os registros vão ser chamados'
+
+
+ALTER TABLE  `mailconfig` ADD  `mail_port` SMALLINT( 5 ) NOT NULL AFTER  `mail_isauth`
