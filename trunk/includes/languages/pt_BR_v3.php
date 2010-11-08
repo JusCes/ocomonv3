@@ -106,6 +106,7 @@ $TRANS['MENU_ADMIN'] = 'Administra&ccedil;&atilde;o';
 
 
 $TRANS['LEGEND_GENERAL_CONFIG'] = "Configura&ccedil;&otilde;es Gerais";
+//----------------------------------------------------------------------
 
 $TRANS['LABEL_LANGUAGE_FILE'] = "Arquivo de idiomas";
 	$TRANS['HINT_LANGUAGE_FILE'] = "Escolha o idioma a ser usado";
@@ -119,9 +120,14 @@ $TRANS['LABEL_SITE'] = "Endere&ccedil;o usado para acesso";
 $TRANS['LABEL_SUPPORT_NAME'] = "Nome do sistema de suporte";
 	$TRANS['HINT_SUPPORT_NAME'] = "O nome inserido neste campo será usado no rodapé, título e no conteúdo das páginas";	
 
+$TRANS['LABEL_TICKET_TERM'] = "Definic&ccedil;&atilde;o de registro";
+	$TRANS['HINT_TICKET_TERM'] = "Aqui pode-se definir qual a melhor definic&ccedil;&atilde;o para cada registro existente";
+//----------------------------------------------------------------------
 
 
-$TRANS['LEGEND_TICKET_CONFIGS'] = "Configura&ccedil;&otilde;es de".$TRANS['TICKET_NAME'];
+$TRANS['LEGEND_TICKET_CONFIGS'] = "Configura&ccedil;&otilde;es de ".$TRANS['TICKET_NAME'];
+//----------------------------------------------------------------------
+$TRANS['LABEL_REG_PAGE'] = "Registros por p&aacute;gina";
 $TRANS['LABEL_ADMIN_CHANGE_DATES'] = "Permitir ao administrador alterar datas";
 $TRANS['LABEL_SCHEDULE_STATUS'] = "Status p/ ".$TRANS[TICKET_NAME]."s agendados na abertura";
 $TRANS['LABEL_SCHEDULE_EDIT'] = "Status p/ ".$TRANS[TICKET_NAME]."s agendados na edi&ccedil;&atilde;o";
