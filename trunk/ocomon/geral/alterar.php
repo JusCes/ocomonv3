@@ -29,9 +29,9 @@
 
 	$auth = new auth;
 	if (isset($_GET['popup'])) {
-		$auth->testa_user_hidden($_SESSION['s_usuario'],$_SESSION['s_nivel'],$_SESSION['s_nivel_desc'],2);
+		$auth->testa_user_hidden($_SESSION['s_usuario'],$_SESSION['s_nivel'],$_SESSION['s_nivel_desc'],4);
 	} else
-		$auth->testa_user($_SESSION['s_usuario'],$_SESSION['s_nivel'],$_SESSION['s_nivel_desc'],2);
+		$auth->testa_user($_SESSION['s_usuario'],$_SESSION['s_nivel'],$_SESSION['s_nivel_desc'],4);
 
 
 	print "<BR><B>".TRANS('TTL_QUICK_SCH','Busca de Ocorrências').":</B><BR>";
