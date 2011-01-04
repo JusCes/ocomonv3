@@ -69,7 +69,7 @@ $TRANS['MENU_ADMIN'] = 'Administra&ccedil;&atilde;o';
 		$TRANS['MENU_ADMIN_CONFIG_EMAILS'] = 'Mensagens para envio e-mail';
 		$TRANS['MENU_ADMIN_CONFIG_COLORS'] = 'Cores do sistema';
 
-	$TRANS['MENU_ADMIN_TICKETS'] = 'Chamados';
+	$TRANS['MENU_ADMIN_TICKETS'] = $TRANS['TICKET_NAME'].'s';
 		$TRANS['MENU_ADMIN_TICKETS_AREAS'] = '&aacute;reas';
 		$TRANS['MENU_ADMIN_TICKETS_AREASCONFIG'] = '&aacute;reas - Configura&ccedil;&otilde;es';
 		$TRANS['MENU_ADMIN_TICKETS_PROBLEMS'] = 'Problemas';
@@ -112,7 +112,7 @@ $TRANS['LABEL_LANGUAGE_FILE'] = "Arquivo de idiomas";
 	$TRANS['HINT_LANGUAGE_FILE'] = "Escolha o idioma a ser usado";
 
 $TRANS['LABEL_DATE_FORMAT'] = 'Formato de exibição de data';
-	$TRANS['HINT_DATE_FORMAT'] = 'Formato de exibição de data é baseado nas configurações do PHP, para maiores informações, acesse <a href=http://php.net/manual/en/function.date.php target=_blank>manual do php</a>';
+	$TRANS['HINT_DATE_FORMAT'] = 'Formato de exibição de data é baseado nas configurações do PHP';
 
 $TRANS['LABEL_SITE'] = "Endere&ccedil;o usado para acesso";
 	$TRANS['HINT_SITE'] = "Este é o endereço que será usado para acessar o sistema";

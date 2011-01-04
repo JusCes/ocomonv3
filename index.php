@@ -88,7 +88,7 @@ if(!isset($_SESSION['s_usuario']) ||
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title><?php echo $_SESSION['s_support_name'] ?></title>
 <link href="includes/css/styles.css" rel="stylesheet" type="text/css" />
 
 
@@ -170,7 +170,9 @@ include ("PATHS.php");
 
   <!-- end .content --></div>
   <div class="footer" id="teste">
-JRSantos Sistema de atendimento e suporte
+
+<?php echo $_SESSION['s_support_name'] ?>
+
   </div>
 
   <!-- end .container --></div>

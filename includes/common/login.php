@@ -137,6 +137,16 @@
 			
 			$_SESSION['s_ocomon_site'] = $rowFormatBar['conf_ocomon_site'];
 
+
+/*
+@jefersondossantos@gmail.com
+@2010/11/10
+definição do nome a ser usado nas diversas partes do sistema, substituindo o
+termo ocomon e dando maior controle da empresa que o estiver usando
+*/
+			$_SESSION['s_support_name'] = $rowFormatBar['conf_support_name'];
+//
+
 			$sqlStyles = "SELECT * FROM temas t, uthemes u  WHERE u.uth_uid = ".$_SESSION['s_uid']." and t.tm_id = u.uth_thid";
 			$execStyles = mysql_query($sqlStyles) or die('ERRO NA TENTATIVA DE RECUPERAR AS INFORMAÇÕES DO TEMA!<BR>'.$sqlStyles);
 			$rowSty = mysql_fetch_array($execStyles);
@@ -270,6 +280,18 @@
 			
 			$_SESSION['s_ocomon_site'] = $rowFormatBar['conf_ocomon_site'];
 
+
+/*
+@jefersondossantos@gmail.com
+@2010/11/10
+definição do nome a ser usado nas diversas partes do sistema, substituindo o
+termo ocomon e dando maior controle da empresa que o estiver usando
+*/
+			$_SESSION['s_support_name'] = $rowFormatBar['conf_support_name'];
+		
+
+
+
 			$sqlStyles = "SELECT * FROM temas t, uthemes u  WHERE u.uth_uid = ".$_SESSION['s_uid']." and t.tm_id = u.uth_thid";
 			$execStyles = mysql_query($sqlStyles) or die('ERRO NA TENTATIVA DE RECUPERAR AS INFORMAÇÕES DO TEMA!<BR>'.$sqlStyles);
 			$rowSty = mysql_fetch_array($execStyles);
@@ -399,6 +421,16 @@
 				exit;
 		}
 	}
+
+
+
+
+
+
+
+
+
+
 
 
 
